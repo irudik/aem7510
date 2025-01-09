@@ -1,0 +1,65 @@
+%These are the packages that we will use in our latex document. 
+\usepackage{ragged2e}
+\usepackage{graphicx}
+\usepackage{natbib}	%Bibliography package. It handles citations and can easily change formats. This is done at the end of the document
+\usepackage[utf8]{inputenx}% For proper input encoding
+\usepackage{adjustbox} %Handles resizing of tables, figures, etc. Based off of page and/or line width/height 
+% Packages for tables
+\usepackage{booktabs}% For Pretty tables
+\usepackage{threeparttable}% For Notes below table
+\usepackage{rotating}% To Rotate Table
+\usepackage{amsmath, amssymb,mathrsfs} %For using math
+\usepackage{bm}
+\usepackage{caption} 
+\usepackage[list=true]{subcaption} %For having multiple figures within the same one. Figure 1, with part (a) and (b)
+%\setcounter{lofdepth}{2}
+\usepackage{setspace} %Single, Double Space, etc 
+\usepackage[paperwidth=8.5in, paperheight=11in,margin=1in]{geometry} %For controlling the dimensions. Very useful for Posters, etc 
+%\usepackage{chngpage} 
+\usepackage{everypage}%For page numbers on rotated pages
+\usepackage[capposition=top]{floatrow}
+\usepackage{accents}
+\usepackage{float}
+\usepackage{comment}
+\usepackage{morefloats}
+\usepackage{placeins}% To Create Float Barriers so the tables will stay in their sections
+\usepackage{pdflscape}
+
+\usepackage{siunitx} %This aligns tables by their decimal and handles processing of the numbers within the tables
+  \sisetup{
+    detect-mode,
+    group-digits      = false,
+    input-symbols     = {( ) [ ] - +},
+    table-align-text-post = false,
+    input-signs             = ,
+    %parse-numbers=false,
+    %scientific-notation = true,
+        %round-mode              = places,
+        %round-precision         = 2,
+        %input-ignore={,},
+    %input-decimal-markers={.},
+    %group-separator={,},
+        } 
+\usepackage{grffile}
+\usepackage{soul}
+\usepackage{color}
+\usepackage{caption}
+%\captionsetup[figure]{justification=raggedright,singlelinecheck=off}
+\sisetup{separate-uncertainty=true}
+%\usepackage{mathptmx}
+\DeclareCaptionLabelFormat{blank}{}
+
+
+%------------------------------------------%
+%    Appendix
+%------------------------------------------%
+\usepackage[titletoc]{appendix}
+
+
+%------------------------------------------%
+%     Hyper Ref 
+%------------------------------------------%
+\usepackage[breaklinks,colorlinks,linkcolor=black,citecolor=black,urlcolor=blue,hyperfootnotes=false]{hyperref}
+\def\UrlBreaks{\do\/\do-\do.\do=\do_\do?\do\&\do\%\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M\do\N\do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X\do\Y\do\Z\do\0\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9} %hyperef does not work with beamer (as far as I know) so comment this out if you are using it. Also leave the hyperfootnotes as false as when they are true they oddly clash with the caption or subcaption package (i think it's this one at least)
+
+

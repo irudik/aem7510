@@ -1,0 +1,125 @@
+
+\usepackage[default]{lato}
+\usepackage[T1]{fontenc}
+\usepackage[labelformat = empty]{caption}
+\usepackage[latin9]{inputenc}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+\usepackage{xcolor}
+\usepackage{adjustbox, amsfonts, amsmath, amsthm, appendix, natbib, booktabs, chngcntr, dcolumn, dsfont, enumerate, float, geometry, graphicx, hyperref, makecell, mathtools, multicol, rotating, soul, subfiles, txfonts, type1cm, verbatim,adjustbox,threeparttable,tabu}
+\include{latex_extras/dynamic_tables}
+\usepackage[asterisk]{mathastext}
+
+% activate={true,nocompatibility} - activate protrusion and expansion
+% final - enable microtype; use "draft" to disable
+% tracking=true, kerning=true, spacing=true - activate these techniques
+% factor=1100 - add 10% to the protrusion amount (default is 1000)
+% stretch=10, shrink=10 - reduce stretchability/shrinkability (default is 20/20)
+\microtypecontext{spacing=nonfrench}
+  {
+      \theoremstyle{plain}
+      \newtheorem{assumption}{Assumption}
+  }
+% Error in subcaption package
+\captionsetup{compatibility=false}
+
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+
+% Line spacing
+\usepackage{setspace}
+\setstretch{1.3}
+
+% LIGHTER GREYS: Define colors
+\definecolor{hl}{HTML}{FFE094}
+\definecolor{hl-red}{HTML}{e41a1c}
+\definecolor{hl-blue}{HTML}{377eb8}
+\definecolor{hl-green}{HTML}{4daf4a}
+\definecolor{hl-gray}{HTML}{7D7D7D}
+\definecolor{my-orange}{HTML}{FFAC0F}
+\definecolor{my-dark-blue}{HTML}{15253B}
+
+% button color
+\setbeamercolor{button}{bg=white,fg=hl-red}
+
+
+% Links
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=false,
+  linkcolor=hl-gray,
+  filecolor=hl-gray,
+  urlcolor=hl-gray,
+}
+% Links have same style as other text
+\urlstyle{same}
+
+% Beamer theme
+% \usetheme{default}
+\usetheme{Pittsburgh}
+% \usecolortheme{beetle}
+% \usefonttheme{default}
+% Remove navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+% % DARKER GREYS: Change theme colors
+\setbeamercolor{frametitle}{bg=my-dark-blue, fg=my-orange}
+\setbeamercolor{framesubtitle}{bg=my-dark-blue, fg=hl}
+\setbeamercolor{normal text}{fg=white}
+\setbeamercolor{background canvas}{bg=my-dark-blue}
+\setbeamercolor{title}{fg=my-orange}
+\setbeamercolor{subtitle}{fg=hl}
+\setbeamercolor{item projected}{bg=my-dark-blue, fg=white}
+\setbeamercolor{footline}{fg=white}
+\setbeamertemplate{itemize item}{\color{white}$\circ$}
+\setbeamertemplate{itemize subitem}{\color{white}$\bullet$}
+\setbeamertemplate{itemize subsubitem}{\color{white}$-$}
+
+
+% Change theme title justification
+\setbeamertemplate{frametitle}[default][left]
+
+\setbeamerfont{title}{size=\Large}
+\setbeamerfont{frametitle}{size=\Large}
+\setbeamerfont{framesubtitle}{size=\normalsize}
+
+\usepackage{stmaryrd}
+\newcommand*\myBullet{
+  % \item[\color{my-mid-grey}\scalebox{1.1}{$\circ$}]}
+  \item[\color{white}\scalebox{1.25}{$\shortrightarrow$}]}
+
+% Tikz setup
+\usetikzlibrary{shapes.geometric, arrows, fit}
+
+% For table formatting:
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+\newcolumntype{d}[1]{D{.}{.}{#1}}
+
+% Italic i.e.
+\newcommand{\ie}{\textit{i.e. }}
+% Italic e.g.
+\newcommand{\eg}{\textit{e.g. }}
+% Italic et al.
+\newcommand{\etal}{\textit{et al. }}
+% Italic etc.
+\newcommand{\etc}{\textit{etc. }}
+
+% Define functions to change row colors in a table
+\makeatletter
+\def\zapcolorreset{\let\reset@color\relax\ignorespaces}
+\def\colorrows#1{\noalign{\aftergroup\zapcolorreset#1}\ignorespaces}
+\makeatother
+
+\makeatletter
+\newcommand\inbetweensize{\@setfontsize\inbetweensize{9.81415}{10.6828}}
+\makeatother

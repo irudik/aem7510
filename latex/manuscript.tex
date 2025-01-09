@@ -1,0 +1,143 @@
+\documentclass[12pt]{article}% Your documentclass. I recommend something from the KOMA script class
+
+%------------------------------------------%
+%                Packages 
+%------------------------------------------%
+\include{latex/latex_extras/packages}
+%------------------------------------------%
+%              Custom Commands 
+%------------------------------------------%
+\include{latex/latex_extras/custom_commands}
+
+%------------------------------------------%
+%      Matter Related to Table Creation 
+%------------------------------------------%
+\include{latex/latex_extras/dynamic_tables}
+
+
+  \begin{document}
+%------------------------------------------%
+%     Title Page
+%------------------------------------------%
+
+\begin{titlepage}
+\vspace*{.25cm}
+\begin{center}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\textbf{
+\noindent\LARGE
+\title
+~
+Paper title here
+}
+
+\vspace{.7cm}
+%\vspace{.4cm}
+{\Large Authors names here.\footnote{Author 1: Affiliation 1. Author 2: Affiliation 2. We thank XYZ.}} \\
+
+\vspace{.25cm}
+{\Large\today}\\
+\vspace{.25cm}
+\end{center}
+
+\begin{abstract}
+\begin{normalsize}
+\begin{singlespace}
+abstract here
+\end{singlespace}
+\end{normalsize}
+\end{abstract}
+
+%abstract
+
+%\vspace{.6cm}
+
+\noindent\textbf{JEL:} JEL codes here
+
+\vspace{.6cm} 
+
+\noindent\textbf{Keywords:} keywords here
+\setcounter{footnote}{0}
+
+
+\end{titlepage}
+
+\newpage
+%------------------------------------------%
+%                Table of Contents
+%------------------------------------------%
+
+% \begin{singlespace}
+% 	\tableofcontents
+% 	\listoftables
+% 	\listoffigures
+% \end{singlespace}
+% \newpage
+
+%------------------------------------------%
+%                Main text
+%------------------------------------------%
+ \FloatBarrier
+%------------------------------------------%
+%                Introduction
+%------------------------------------------%
+\section{Introduction} \label{sec:intro}
+
+%------------------------------------------%
+%      Institutional Background
+%------------------------------------------%
+\section{Institutional Background} \label{sec:background}
+
+%------------------------------------------%
+%       Model
+%------------------------------------------%
+\section{Model} \label{sec:model}
+
+%------------------------------------------%
+%       Data
+%------------------------------------------%
+\section{Data} \label{sec:data}
+ 
+%------------------------------------------%
+%       Methods
+%------------------------------------------%
+\section{Empirical Methods} \label{sec:methods}
+
+%------------------------------------------%
+%       Results
+%------------------------------------------%
+\section{Results} \label{sec:results}
+
+%------------------------------------------%
+%       Conclusion and Discussion
+%------------------------------------------%
+\section{Conclusion and Discussion} \label{sec:conclusion}
+
+%------------------------------------------%
+%                References
+%------------------------------------------%
+\FloatBarrier
+\newpage
+\begin{singlespace}
+\bibliographystyle{references/econ}
+\bibliography{references/references}{}
+\end{singlespace}
+%------------------------------------------%
+%                Appendix
+%------------------------------------------%
+\FloatBarrier
+\newpage
+\appendix
+\begin{Large}
+\section{Appendix}
+\end{Large}
+
+% Reset figure/table #'s
+\setcounter{table}{0}
+% Add an A in front of tables and figures
+\renewcommand{\thetable}{A\arabic{table}}
+
+\begin{appendices}
+\end{appendices}
+
+\end{document}

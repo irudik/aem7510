@@ -1,0 +1,67 @@
+\documentclass[handout,english,14pt,aspectratio=1610]{beamer}
+%\documentclass[english,11pt,aspectratio=1610]{beamer}
+
+% slides set up
+\include{latex_extras/slides_setup.tex}
+
+% START HERE ------------------------------------------------------------
+
+\title{Your paper here}
+
+\author[Names]{%
+  \texorpdfstring{%
+    \begin{columns}
+      \column{.35\linewidth}
+      \centering
+      {Name} \\ \textcolor{hl}{Affil}
+      \column{.35\linewidth}
+      \centering
+      {Name} \\ \textcolor{hl}{Affil}
+    \end{columns}
+ }
+ {initials}
+}
+
+\date{Presentation location}
+
+\begin{document}
+
+\maketitle
+
+%  Tikz setup for boxes
+% Introduce a new counter for counting the nodes needed for circling
+\newcounter{nodecount}
+% Command for making a new node and naming it according to the nodecount counter
+\newcommand\tabnode[1]{\addtocounter{nodecount}{1} \tikz \node  (\arabic{nodecount}) {#1};}
+% Some options common to all the nodes and paths
+\tikzstyle{every picture}+=[remember picture,baseline]
+\tikzstyle{every node}+=[anchor=base,
+minimum width=1.5cm,align=center,text depth=.25ex,outer sep=0.5pt]
+\tikzstyle{every path}+=[thick, rounded corners]
+
+\begin{frame}[c]{Hurricanes are devastating}
+    \begin{columns}
+        \begin{column}{0.55\textwidth}
+           \begin{itemize} \itemsep 1em
+               \item[] Annual US hurricane costs are tens of billions per year
+               \item[] This totals around 0.25\% of GDP
+               \item[] Costs are expected to rise in the future due to climate change and growth
+           \end{itemize}
+        \end{column}
+        \begin{column}{0.55\textwidth}  %%<--- here
+            \begin{center}
+                \includegraphics[width=\linewidth]{output/figures/katrina.jpeg}
+             \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}<presentation:0>
+  \begin{singlespace}
+    \bibliographystyle{references/econ}
+    \bibliography{references/hurricane-references}{}
+    \end{singlespace}
+\end{frame}
+
+\end{document}
