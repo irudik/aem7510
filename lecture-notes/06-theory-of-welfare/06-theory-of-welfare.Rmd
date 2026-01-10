@@ -1,5 +1,5 @@
-<!-- Auto-rebuild: ls 06-theory-of-welfare/06-theory-of-welfare.Rmd | entr -c Rscript -e "rmarkdown::render('06-theory-of-welfare/06-theory-of-welfare.Rmd')" -->
 ---
+# Auto-rebuild: ls 06-theory-of-welfare/06-theory-of-welfare.Rmd | entr -c Rscript -e "rmarkdown::render('06-theory-of-welfare/06-theory-of-welfare.Rmd')"
 title: "Lecture 6"
 subtitle: "Theory of applied welfare analysis"
 author: Ivan Rudik

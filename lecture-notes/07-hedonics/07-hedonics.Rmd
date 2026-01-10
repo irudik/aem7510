@@ -1,5 +1,5 @@
-<!-- Auto-rebuild: ls 07-hedonics/07-hedonics.Rmd | entr -c Rscript -e "rmarkdown::render('07-hedonics/07-hedonics.Rmd')" -->
 ---
+# Auto-rebuild: ls 07-hedonics/07-hedonics.Rmd | entr -c Rscript -e "rmarkdown::render('07-hedonics/07-hedonics.Rmd')"
 title: "Lecture 7"
 subtitle: "Hedonics: Property value models"
 author: Ivan Rudik

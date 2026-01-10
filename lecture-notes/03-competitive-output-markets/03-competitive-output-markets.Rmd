@@ -1,5 +1,5 @@
-<!-- Auto-rebuild: ls 03-competitive-output-markets/03-competitive-output-markets.Rmd | entr -c Rscript -e "rmarkdown::render('03-competitive-output-markets/03-competitive-output-markets.Rmd')" -->
 ---
+# Auto-rebuild: ls 03-competitive-output-markets/03-competitive-output-markets.Rmd | entr -c Rscript -e "rmarkdown::render('03-competitive-output-markets/03-competitive-output-markets.Rmd')"
 title: "Lecture 3"
 subtitle: "Competitive output markets"
 author: Ivan Rudik

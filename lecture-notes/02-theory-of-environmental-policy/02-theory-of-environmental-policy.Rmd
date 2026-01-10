@@ -1,5 +1,5 @@
-<!-- Auto-rebuild: ls 02-theory-of-environmental-policy/02-theory-of-environmental-policy.Rmd | entr -c Rscript -e "rmarkdown::render('02-theory-of-environmental-policy/02-theory-of-environmental-policy.Rmd')" -->
 ---
+# Auto-rebuild: ls 02-theory-of-environmental-policy/02-theory-of-environmental-policy.Rmd | entr -c Rscript -e "rmarkdown::render('02-theory-of-environmental-policy/02-theory-of-environmental-policy.Rmd')"
 title: "Lecture 2"
 subtitle: "Theory of environmental policy"
 author: Ivan Rudik

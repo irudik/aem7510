@@ -1,5 +1,5 @@
-<!-- Auto-rebuild: ls 05-pre-existing-distortions/05-pre-existing-distortions.Rmd | entr -c Rscript -e "rmarkdown::render('05-pre-existing-distortions/05-pre-existing-distortions.Rmd')" -->
 ---
+# Auto-rebuild: ls 05-pre-existing-distortions/05-pre-existing-distortions.Rmd | entr -c Rscript -e "rmarkdown::render('05-pre-existing-distortions/05-pre-existing-distortions.Rmd')"
 title: "Lecture 5"
 subtitle: "Environmental policy with pre-existing distortions"
 author: Ivan Rudik

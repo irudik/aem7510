@@ -1,5 +1,5 @@
-<!-- Auto-rebuild: ls 04-non-competitive-output-markets/04-non-competitive-output-markets.Rmd | entr -c Rscript -e "rmarkdown::render('04-non-competitive-output-markets/04-non-competitive-output-markets.Rmd')" -->
 ---
+# Auto-rebuild: ls 04-non-competitive-output-markets/04-non-competitive-output-markets.Rmd | entr -c Rscript -e "rmarkdown::render('04-non-competitive-output-markets/04-non-competitive-output-markets.Rmd')"
 title: "Lecture 4"
 subtitle: "Non-competitive output markets"
 author: Ivan Rudik

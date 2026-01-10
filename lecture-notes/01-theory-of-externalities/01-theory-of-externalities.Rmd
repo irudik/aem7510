@@ -1,5 +1,5 @@
-<!-- Auto-rebuild: ls 01-theory-of-externalities/01-theory-of-externalities.Rmd | entr -c Rscript -e "rmarkdown::render('01-theory-of-externalities/01-theory-of-externalities.Rmd')" -->
 ---
+# Auto-rebuild: ls 01-theory-of-externalities/01-theory-of-externalities.Rmd | entr -c Rscript -e "rmarkdown::render('01-theory-of-externalities/01-theory-of-externalities.Rmd')"
 title: "Lecture 1"
 subtitle: "Theory of externalities"
 author: Ivan Rudik
@@ -110,7 +110,7 @@ The normative criterion we use to judge the desirability of economic outcomes is
 
 .pull-right[
 
-![Vifredo Pareto](2-theory-of-externalities_files/figures/pareto.jpg)
+<!-- ![Vifredo Pareto](figures/pareto.jpg) - TODO: add pareto.jpg image -->
 
 ]
 
