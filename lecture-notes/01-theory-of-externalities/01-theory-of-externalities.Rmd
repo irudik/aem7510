@@ -14,6 +14,7 @@ output:
       countIncrementalSlides: false
       ratio: '16:9'
 
+<!-- Auto-rebuild: ls lecture-notes/01-theory-of-externalities/01-theory-of-externalities.Rmd | entr -c Rscript -e "rmarkdown::render('lecture-notes/01-theory-of-externalities/01-theory-of-externalities.Rmd')" -->
 
 ---
 exclude: true
@@ -312,7 +313,7 @@ $$MRS^{xz}_1 \equiv {\partial U_1 \over \partial x_1}\Bigg/{\partial U_1 \over \
 
 --
 
-It tells us how many units of $z$ person 1 is willing to give up to get 1 more unit of $x$
+It tells us how many units of $z$ person 1 is willing to give up to get 1 more unit of $x$, holding utility fixed
 
 --
 
@@ -395,11 +396,11 @@ The Lagrangian is given by:
 
 Now let's look at the FOCs
 
----
+<!-- ---
 
 # Pareto optimality: Problem
 
-$$\max_{x_1,x_2,z_1,z_2,l_x,l_z,E} U_1(x_1,z_1,E) \\+ \lambda_u[U_2(x_2,z_2,E) - \bar{u}_2] \\+ \lambda_x[f(l_x,E) - x_1 - x_2] \\+ \lambda_z[g(l_z) - z_1-z_2] \\+ \lambda_l[l - l_x - l_z]$$
+$$\max_{x_1,x_2,z_1,z_2,l_x,l_z,E} U_1(x_1,z_1,E) \\+ \lambda_u[U_2(x_2,z_2,E) - \bar{u}_2] \\+ \lambda_x[f(l_x,E) - x_1 - x_2] \\+ \lambda_z[g(l_z) - z_1-z_2] \\+ \lambda_l[l - l_x - l_z]$$ -->
 
 ---
 
