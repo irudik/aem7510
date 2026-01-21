@@ -20,8 +20,12 @@ exclude: true
 ```{r setup}
 if (!require("pacman")) install.packages("pacman")
 pacman::p_load(
-  tidyverse, tidylog, xaringanExtra, rlang, patchwork
+  tidyverse, tidylog, xaringanExtra, rlang, patchwork, showtext
 )
+
+# Load Source Sans Pro font from Google Fonts for ggplot
+font_add_google("Source Sans Pro", "Source Sans Pro")
+showtext_auto()
 options(htmltools.dir.version = FALSE)
 knitr::opts_hooks$set(fig.callout = function(options) {
   if (options$fig.callout) {
@@ -38,7 +42,7 @@ theme_empty <- theme_minimal() +
   theme(
     legend.position = "none",
     title = element_text(size = 24),
-    text = element_text(family = "Lato"),
+    text = element_text(family = "Source Sans Pro"),
     axis.text.x = element_text(size = 24), axis.text.y = element_text(size = 24),
     axis.title.x = element_text(size = 24), axis.title.y = element_text(size = 24),
     panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(),
@@ -51,7 +55,7 @@ theme_blank <- theme_minimal() +
   theme(
     legend.position = "none",
     title = element_text(size = 24),
-    text = element_text(family = "Lato"),
+    text = element_text(family = "Source Sans Pro"),
     axis.text.x = element_blank(), axis.text.y = element_blank(),
     axis.title.x = element_blank(), axis.title.y = element_blank(),
     panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(),

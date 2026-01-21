@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i);
 @import url(https://fonts.googleapis.com/css?family=Zilla+Slab:300,300i,400,400i,500,500i,700,700i);
 
 
@@ -80,7 +80,7 @@ footer p {
 }
 
 .article-style #TOC {
-    font-family: "Lato";
+    font-family: "Source Sans Pro";
     font-size: 0.8rem;
     text-align: left;
     background: #f2f2f2;
@@ -104,7 +104,7 @@ footer p {
 }
 
 .fake-header-table, td.mid-table-header {
-    font-family: "Lato";
+    font-family: "Source Sans Pro";
 }
 
 .fake-header-table {
@@ -294,7 +294,7 @@ td.mid-table-header {
 }
 
 .remark-slide-content {
-  font-family: "Lato";
+  font-family: "Source Sans Pro";
   border-top: 70px solid #ffffff;
   color: #000000;
   background-color: #ffffff;

@@ -20,8 +20,45 @@ exclude: true
 ```{r setup}
 if (!require("pacman")) install.packages("pacman")
 pacman::p_load(
-  tidyverse, tidylog, xaringanExtra, rlang, patchwork
+  tidyverse, tidylog, xaringanExtra, rlang, patchwork, showtext
 )
+
+# Load Source Sans Pro font from Google Fonts for ggplot
+font_add_google("Source Sans Pro", "Source Sans Pro")
+showtext_auto()
+
+# Color definitions
+red_pink <- "#e64173"
+blue <- "#3C93DC"
+red <- "#ff0000"
+
+# Custom themes for ggplot
+theme_empty <- theme_minimal() +
+  theme(
+    legend.position = "none",
+    title = element_text(size = 24),
+    text = element_text(family = "Source Sans Pro"),
+    axis.text.x = element_text(size = 24), axis.text.y = element_text(size = 24),
+    axis.title.x = element_text(size = 24), axis.title.y = element_text(size = 24),
+    panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(),
+    panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(),
+    panel.background = element_rect(fill = "#ffffff", colour = NA),
+    plot.background = element_rect(fill = "#ffffff", colour = NA),
+    axis.line = element_line(colour = "black"), axis.ticks = element_line(),
+  )
+theme_blank <- theme_minimal() +
+  theme(
+    legend.position = "none",
+    title = element_text(size = 24),
+    text = element_text(family = "Source Sans Pro"),
+    axis.text.x = element_blank(), axis.text.y = element_blank(),
+    axis.title.x = element_blank(), axis.title.y = element_blank(),
+    panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(),
+    panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(),
+    panel.background = element_rect(fill = "#ffffff", colour = NA),
+    plot.background = element_rect(fill = "#ffffff", colour = NA),
+    axis.line = element_blank(), axis.ticks = element_blank(),
+  )
 options(htmltools.dir.version = FALSE)
 knitr::opts_hooks$set(fig.callout = function(options) {
   if (options$fig.callout) {
@@ -584,17 +621,12 @@ ggplot() +
   annotate("text", size = 6, label = expression(p^0), x = 5, y = 0.5, color = "#ca5670") +
   annotate("text", size = 6, label = expression(tilde(p)^1), x = 0.5, y = 6, color = "#638ccc") +
   annotate("text", size = 6, label = expression(tilde(p)^0), x = 0.5, y = 11.2, color = "#ca5670") +
-  theme_minimal() +
+  theme_empty +
   theme(
-    legend.position = "none",
-    title = element_text(size = 24),
-    axis.text.x = element_text(size = 16, color = "#000000"), axis.text.y = element_text(size = 16, color = "#000000"),
-    axis.title.x = element_text(size = 16, color = "#000000"), axis.title.y = element_text(size = 16, color = "#000000"),
-    panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(),
-    panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(),
-    panel.background = element_rect(fill = "#ffffff",colour = NA),
-    plot.background = element_rect(fill = "#ffffff",colour = NA),
-    axis.line = element_line(colour = "black")
+    axis.text.x = element_text(size = 16, color = "#000000"),
+    axis.text.y = element_text(size = 16, color = "#000000"),
+    axis.title.x = element_text(size = 16, color = "#000000"),
+    axis.title.y = element_text(size = 16, color = "#000000")
   ) +
   scale_x_continuous(expand = c(0, 0), limits = c(0, 15),
                      breaks = c(2.75, 3.5, 4, 5), labels = expression(x[0], c, d, x[1])) +
@@ -710,17 +742,12 @@ ggplot() +
   annotate("text", size = 6, label = "d", x = 2.55, y = 2.65) +
   annotate("text", size = 6, label = "b", x = 3.05, y = 2.15) +
   annotate("text", size = 6, label = "c", x = 2, y = 2.15) +
-  theme_minimal()  +
+  theme_empty +
   theme(
-    legend.position = "none",
-    title = element_text(size = 24),
-    axis.text.x = element_text(size = 16, color = "#000000"), axis.text.y = element_text(size = 16, color = "#000000"),
-    axis.title.x = element_text(size = 16, color = "#000000"), axis.title.y = element_text(size = 16, color = "#000000"),
-    panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(),
-    panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(),
-    panel.background = element_rect(fill = "#ffffff",colour = NA),
-    plot.background = element_rect(fill = "#ffffff",colour = NA),
-    axis.line = element_line(colour = "black")
+    axis.text.x = element_text(size = 16, color = "#000000"),
+    axis.text.y = element_text(size = 16, color = "#000000"),
+    axis.title.x = element_text(size = 16, color = "#000000"),
+    axis.title.y = element_text(size = 16, color = "#000000")
   ) +
   labs(x = "X",
        y = "Price",
@@ -860,17 +887,12 @@ ggplot() +
   annotate("text", size = 6, label = "d", x = 2.55, y = 2.65) +
   annotate("text", size = 6, label = "b", x = 3.05, y = 2.15) +
   annotate("text", size = 6, label = "c", x = 2, y = 2.15) +
-  theme_minimal()  +
+  theme_empty +
   theme(
-    legend.position = "none",
-    title = element_text(size = 24),
-    axis.text.x = element_text(size = 16, color = "#000000"), axis.text.y = element_text(size = 16, color = "#000000"),
-    axis.title.x = element_text(size = 16, color = "#000000"), axis.title.y = element_text(size = 16, color = "#000000"),
-    panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(),
-    panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(),
-    panel.background = element_rect(fill = "#ffffff",colour = NA),
-    plot.background = element_rect(fill = "#ffffff",colour = NA),
-    axis.line = element_line(colour = "black")
+    axis.text.x = element_text(size = 16, color = "#000000"),
+    axis.text.y = element_text(size = 16, color = "#000000"),
+    axis.title.x = element_text(size = 16, color = "#000000"),
+    axis.title.y = element_text(size = 16, color = "#000000")
   ) +
   labs(x = "X",
        y = "Price",
@@ -935,17 +957,12 @@ ggplot() +
   annotate("text", size = 6, label = "d", x = 2.55, y = 2.65) +
   annotate("text", size = 6, label = "b", x = 3.05, y = 2.15) +
   annotate("text", size = 6, label = "c", x = 2, y = 2.15) +
-  theme_minimal()  +
+  theme_empty +
   theme(
-    legend.position = "none",
-    title = element_text(size = 24),
-    axis.text.x = element_text(size = 16, color = "#000000"), axis.text.y = element_text(size = 16, color = "#000000"),
-    axis.title.x = element_text(size = 16, color = "#000000"), axis.title.y = element_text(size = 16, color = "#000000"),
-    panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(),
-    panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(),
-    panel.background = element_rect(fill = "#ffffff",colour = NA),
-    plot.background = element_rect(fill = "#ffffff",colour = NA),
-    axis.line = element_line(colour = "black")
+    axis.text.x = element_text(size = 16, color = "#000000"),
+    axis.text.y = element_text(size = 16, color = "#000000"),
+    axis.title.x = element_text(size = 16, color = "#000000"),
+    axis.title.y = element_text(size = 16, color = "#000000")
   ) +
   labs(x = "X",
        y = "Price",
@@ -1036,17 +1053,12 @@ ggplot() +
   annotate("text", size = 6, label = "d", x = 2.55, y = 2.65) +
   annotate("text", size = 6, label = "b", x = 3.05, y = 2.15) +
   annotate("text", size = 6, label = "c", x = 2, y = 2.15) +
-  theme_minimal()  +
+  theme_empty +
   theme(
-    legend.position = "none",
-    title = element_text(size = 24),
-    axis.text.x = element_text(size = 16, color = "#000000"), axis.text.y = element_text(size = 16, color = "#000000"),
-    axis.title.x = element_text(size = 16, color = "#000000"), axis.title.y = element_text(size = 16, color = "#000000"),
-    panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(),
-    panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(),
-    panel.background = element_rect(fill = "#ffffff",colour = NA),
-    plot.background = element_rect(fill = "#ffffff",colour = NA),
-    axis.line = element_line(colour = "black")
+    axis.text.x = element_text(size = 16, color = "#000000"),
+    axis.text.y = element_text(size = 16, color = "#000000"),
+    axis.title.x = element_text(size = 16, color = "#000000"),
+    axis.title.y = element_text(size = 16, color = "#000000")
   ) +
   labs(x = "X",
        y = "Price",
@@ -1402,17 +1414,12 @@ ggplot() +
   annotate("text", size = 6, label = "c", x = 8.3, y = 2.35) +
   annotate("text", size = 6, label = "d", x = 4.7, y = 7.8) +
   annotate("text", size = 6, label = "a", x = 4.2, y = 4.75) +
-  theme_minimal() +
+  theme_empty +
   theme(
-    legend.position = "none",
-    title = element_text(size = 24),
-    axis.text.x = element_text(size = 16, color = "#000000"), axis.text.y = element_text(size = 16, color = "#000000"),
-    axis.title.x = element_text(size = 16, color = "#000000"), axis.title.y = element_text(size = 16, color = "#000000"),
-    panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(),
-    panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(),
-    panel.background = element_rect(fill = "#ffffff",colour = NA),
-    plot.background = element_rect(fill = "#ffffff",colour = NA),
-    axis.line = element_line(colour = "black")
+    axis.text.x = element_text(size = 16, color = "#000000"),
+    axis.text.y = element_text(size = 16, color = "#000000"),
+    axis.title.x = element_text(size = 16, color = "#000000"),
+    axis.title.y = element_text(size = 16, color = "#000000")
   ) +
   scale_x_continuous(expand = c(0, 0), limits = c(0, 15),
                      breaks = c(4.5, 8), labels = expression(q^0, q^1)) +
@@ -1552,17 +1559,12 @@ ggplot() +
   annotate("text", size = 6, label = expression(pi[2](tilde(y)[2])), x = 8.3, y = 2.35) +
   annotate("text", size = 6, label = expression(pi[3](tilde(y)[3])), x = 4.7, y = 7.8) +
   annotate("text", size = 6, label = expression(pi[0](tilde(y)[0])), x = 4.2, y = 4.75) +
-  theme_minimal() +
+  theme_empty +
   theme(
-    legend.position = "none",
-    title = element_text(size = 24),
-    axis.text.x = element_text(size = 16, color = "#000000"), axis.text.y = element_text(size = 16, color = "#000000"),
-    axis.title.x = element_text(size = 16, color = "#000000"), axis.title.y = element_text(size = 16, color = "#000000"),
-    panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(),
-    panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(),
-    panel.background = element_rect(fill = "#ffffff",colour = NA),
-    plot.background = element_rect(fill = "#ffffff",colour = NA),
-    axis.line = element_line(colour = "black")
+    axis.text.x = element_text(size = 16, color = "#000000"),
+    axis.text.y = element_text(size = 16, color = "#000000"),
+    axis.title.x = element_text(size = 16, color = "#000000"),
+    axis.title.y = element_text(size = 16, color = "#000000")
   ) +
   scale_x_continuous(expand = c(0, 0), limits = c(0, 15),
                      breaks = c(4.5, 8), labels = expression(q^0, q^1)) +
@@ -1659,17 +1661,12 @@ ggplot() +
   annotate("text", size = 6, label = "d", x = 1.55, y = 3.65) +
   annotate("text", size = 6, label = "b", x = 3.05, y = 2.15) +
   annotate("text", size = 6, label = "c", x = 3.1, y = 1.15) +
-  theme_minimal()  +
+  theme_empty +
   theme(
-    legend.position = "none",
-    title = element_text(size = 24),
-    axis.text.x = element_text(size = 16, color = "#000000"), axis.text.y = element_text(size = 16, color = "#000000"),
-    axis.title.x = element_text(size = 16, color = "#000000"), axis.title.y = element_text(size = 16, color = "#000000"),
-    panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(),
-    panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(),
-    panel.background = element_rect(fill = "#ffffff",colour = NA),
-    plot.background = element_rect(fill = "#ffffff",colour = NA),
-    axis.line = element_line(colour = "black")
+    axis.text.x = element_text(size = 16, color = "#000000"),
+    axis.text.y = element_text(size = 16, color = "#000000"),
+    axis.title.x = element_text(size = 16, color = "#000000"),
+    axis.title.y = element_text(size = 16, color = "#000000")
   ) +
   labs(x = "q",
        y = "Price",

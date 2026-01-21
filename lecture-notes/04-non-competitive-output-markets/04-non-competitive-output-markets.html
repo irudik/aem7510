@@ -47,8 +47,45 @@ if (!require("pacman")) install.packages("pacman")
 
 ``` r
 pacman::p_load(
-  tidyverse, tidylog, xaringanExtra, rlang, patchwork
+  tidyverse, tidylog, xaringanExtra, rlang, patchwork, showtext
 )
+
+# Load Source Sans Pro font from Google Fonts for ggplot
+font_add_google("Source Sans Pro", "Source Sans Pro")
+showtext_auto()
+
+# Color definitions
+red_pink &lt;- "#e64173"
+blue &lt;- "#3C93DC"
+red &lt;- "#ff0000"
+
+# Custom themes for ggplot
+theme_empty &lt;- theme_minimal() +
+  theme(
+    legend.position = "none",
+    title = element_text(size = 24),
+    text = element_text(family = "Source Sans Pro"),
+    axis.text.x = element_text(size = 24), axis.text.y = element_text(size = 24),
+    axis.title.x = element_text(size = 24), axis.title.y = element_text(size = 24),
+    panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(),
+    panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(),
+    panel.background = element_rect(fill = "#ffffff", colour = NA),
+    plot.background = element_rect(fill = "#ffffff", colour = NA),
+    axis.line = element_line(colour = "black"), axis.ticks = element_line(),
+  )
+theme_blank &lt;- theme_minimal() +
+  theme(
+    legend.position = "none",
+    title = element_text(size = 24),
+    text = element_text(family = "Source Sans Pro"),
+    axis.text.x = element_blank(), axis.text.y = element_blank(),
+    axis.title.x = element_blank(), axis.title.y = element_blank(),
+    panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(),
+    panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(),
+    panel.background = element_rect(fill = "#ffffff", colour = NA),
+    plot.background = element_rect(fill = "#ffffff", colour = NA),
+    axis.line = element_blank(), axis.ticks = element_blank(),
+  )
 options(htmltools.dir.version = FALSE)
 knitr::opts_hooks$set(fig.callout = function(options) {
   if (options$fig.callout) {
