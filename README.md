@@ -1,4 +1,4 @@
-# AEM 7510: Environmental Economics
+# AEM 7510: Environmental Economics (2025)
 **Time**: Tuesday and Thursday 2:55-4:10
 
 **Location**: Statler 445
