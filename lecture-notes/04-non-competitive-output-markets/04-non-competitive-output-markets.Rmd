@@ -564,7 +564,7 @@ $$-C_E(X,E) = D'(E^m) + P'(X^m)X^m {dX^m/d\tau \over dE^m/d\tau}$$
 
 --
 
-The last term doesn't equal zero so this FOC, given the second-best tax, cannot is not equal to the first-best condition
+The last term doesn't equal zero so this FOC, given the second-best tax, cannot be equal to the first-best condition
 
 --
 
